@@ -1,0 +1,38 @@
+<h1> sample text </h1>
+
+<table style="width:100%">
+  <tr>
+	<th>About Us</th>
+    <th>Availabilities</th>
+    <th>Bookings</th>
+    <th> <a href="account/index">Account</a> </th>
+  </tr>
+</table>
+
+<p>
+Understand:
+What is meditation.
+<br>
+
+<br>
+Prepare:
+Know what is required.
+<br>
+
+<br>
+Connect:
+Meet like minded individuals
+</p>
+
+<div class="Sign_Form">
+  <h1>Sign Up</h1>
+  <%= form_for(:user, :url => {controller: 'users', :action => 'create'}) do |f| %>
+    <p> Username:</br> <%= f.text_field :username%> </p>
+    <p> Email:</br> <%= f.text_field :email%> </p>
+    <p> Password:</br> <%= f.password_field :password%></p>
+    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+	<p> Age:<br> <%= f.text_field :age%> </p>
+	<p> Gender:<br> <%= f.text_field :gender%> </p>
+    <%= f.submit :Signup %>
+  <% end %>
+</div>
