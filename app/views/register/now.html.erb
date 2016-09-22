@@ -1,0 +1,15 @@
+<div class="Sign_Form">
+  <h1>Register</h1>
+  <%= form_for(:user, :url => {controller: 'users', :action => 'create'}) do |f| %>
+    <p> Username:</br> <%= f.text_field :username%> </p>
+    <p> Email:</br> <%= f.text_field :email%> </p>
+    <p> Password:</br> <%= f.password_field :password%></p>
+    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+	<p> Age:<br> <%= f.text_field :age%> </p>
+	<p> Gender:<br> <%= f.select :gender, [['Male', 'male'],['Female','female']]%> </p>
+    <%= f.submit :Signup %>
+  <% end %>
+</div>
+
+<br>
+<a href="/welcome/index">Home</a>

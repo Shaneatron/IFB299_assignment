@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'register/now'
+
+  get 'course/info'
+
+  get 'centre/info'
+
   get 'account/index'
 
   get 'sessions/login'
